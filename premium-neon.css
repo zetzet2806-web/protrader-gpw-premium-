@@ -1,0 +1,106 @@
+body {
+    background: #0A0A0F;
+    color: #E6E6E6;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.neon {
+    color: #00F6FF;
+    text-shadow: 0 0 8px #00F6FF, 0 0 16px #00F6FF;
+}
+
+.neon-purple {
+    color: #B400FF;
+    text-shadow: 0 0 8px #B400FF, 0 0 16px #B400FF;
+}
+
+.neon-green {
+    color: #00FF88;
+    text-shadow: 0 0 8px #00FF88, 0 0 16px #00FF88;
+}
+
+button {
+    background: transparent;
+    border: 2px solid #00F6FF;
+    color: #00F6FF;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #00F6FF;
+    color: #0A0A0F;
+    box-shadow: 0 0 12px #00F6FF, 0 0 24px #00F6FF;
+}
+
+.card {
+    background: #111118;
+    border: 1px solid rgba(0, 246, 255, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 12px rgba(0, 246, 255, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 246, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h1 {
+    color: #00F6FF;
+}
+
+h2 {
+    color: #B400FF;
+}
+
+h3 {
+    color: #00FF88;
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    border-left: 4px solid #00F6FF;
+    padding-left: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th {
+    background: #111118;
+    color: #00F6FF;
+    padding: 10px;
+    border-bottom: 2px solid #00F6FF;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 246, 255, 0.2);
+}
+
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 8px rgba(0, 246, 255, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(0, 246, 255, 0.6); }
+    100% { box-shadow: 0 0 8px rgba(0, 246, 255, 0.3); }
+}
+
+.glow-pulse {
+    animation: glowPulse 2s infinite;
+  }
