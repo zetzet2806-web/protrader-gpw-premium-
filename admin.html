@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel admina – ProTrader GPW</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Panel admina</h1>
+      <p class="subtitle">Zarządzanie kodami dostępu.</p>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <h2>Logowanie admina</h2>
+        <label class="label">Hasło admina</label>
+        <input type="password" id="adminPass" placeholder="Hasło admina">
+        <button id="adminLoginBtn">Wejdź</button>
+        <p id="adminMsg" class="msg"></p>
+      </section>
+
+      <section class="card" id="adminPanel" style="display:none; margin-top:16px;">
+        <h2>Kody dostępu</h2>
+
+        <label class="label">Nowy kod</label>
+        <input type="text" id="newCode" placeholder="np. GPW-2024-ABC">
+        <button id="addCodeBtn">Dodaj kod</button>
+
+        <p class="hint">Aktywne kody:</p>
+        <ul id="codesList" class="codesList"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Panel admina
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
