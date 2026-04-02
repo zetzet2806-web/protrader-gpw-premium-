@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Logowanie – ProTrader GPW Premium</title>
+</head>
+<body style="background:#0a0a0a; color:white; font-family:Arial; text-align:center; padding-top:80px;">
+    <h1>Logowanie</h1>
+    <p>Wpisz swój klucz premium:</p>
+
+    <input id="key" type="password" placeholder="Klucz premium" style="padding:10px; width:250px;">
+    <br><br>
+
+    <button onclick="login()" style="padding:10px 20px;">Zaloguj</button>
+
+    <script>
+        function login() {
+            const key = document.getElementById("key").value;
+
+            // TU WPISZESZ SWÓJ KLUCZ PREMIUM
+            if (key === "GPW-PREMIUM-2024") {
+                localStorage.setItem("premium", "true");
+                window.location.href = "premium.html";
+            } else {
+                alert("Niepoprawny klucz premium");
+            }
+        }
+    </script>
+</body>
+</html>
