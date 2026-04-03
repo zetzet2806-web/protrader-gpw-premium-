@@ -3,29 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <title>ProTrader GPW Premium</title>
-    <link rel="stylesheet" href="premium-neon.css">
+    <style>
+        body {
+            background: #0a0a0a;
+            color: white;
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 32px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #111;
+            border: 1px solid #222;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            border-color: #0ff;
+            box-shadow: 0 0 10px #0ff;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #0ff;
+        }
+
+        .logout {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #222;
+            border: 1px solid #444;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .logout:hover {
+            background: #333;
+        }
+    </style>
 </head>
+
 <body>
-    <h1 class="neon">ProTrader GPW Premium</h1>
 
+<!-- BLOKADA PREMIUM -->
+<script>
+    if (localStorage.getItem("premium") !== "true") {
+        window.location.href = "login.html";
+    }
+</script>
+
+<!-- WYLOGOWANIE -->
+<button class="logout" onclick="logout()">Wyloguj</button>
+<script>
+    function logout() {
+        localStorage.removeItem("premium");
+        window.location.href = "login.html";
+    }
+</script>
+
+<h1>ProTrader GPW Premium</h1>
+
+<div class="container">
+
+    <!-- AI PICKS -->
     <div class="card">
-        <h2 class="section-title">AI Picks</h2>
-        <p>Lista spółek wybranych algorytmicznie.</p>
+        <h2>AI Picks</h2>
+        <p>Rekomendacje generowane przez model AI:</p>
+        <ul>
+            <li>🔹 <b>CDR</b> – momentum + wolumen</li>
+            <li>🔹 <b>PLW</b> – wybicie z konsolidacji</li>
+            <li>🔹 <b>11B</b> – sygnał trendowy</li>
+            <li>🔹 <b>MBANK</b> – silny popyt instytucjonalny</li>
+        </ul>
     </div>
 
+    <!-- ALERTY GPW -->
     <div class="card">
-        <h2 class="section-title">Alerty premium</h2>
-        <p>Alerty wolumenowe, wybicia, sygnały intraday.</p>
+        <h2>Alerty GPW</h2>
+        <p>Ostatnie sygnały rynkowe:</p>
+        <ul>
+            <li>⚠️ <b>PKN</b> – nagły wzrost wolumenu</li>
+            <li>⚠️ <b>JSW</b> – wybicie oporu</li>
+            <li>⚠️ <b>CCC</b> – świeca odwrócenia</li>
+        </ul>
     </div>
 
+    <!-- STRATEGIE -->
     <div class="card">
-        <h2 class="section-title">Strategie intraday</h2>
-        <p>Scenariusze wejść/wyjść, poziomy, zarządzanie ryzykiem.</p>
+        <h2>Strategie Premium</h2>
+        <p>Najlepsze strategie dla GPW/NC:</p>
+        <ul>
+            <li>📈 Breakout 20-dniowy</li>
+            <li>📉 Mean Reversion</li>
+            <li>📊 Momentum + Wolumen</li>
+            <li>🟦 Strategia sektorowa AI</li>
+        </ul>
     </div>
 
+    <!-- ANALIZY SEKTOROWE -->
     <div class="card">
-        <h2 class="section-title">Analizy GPW/NC</h2>
-        <p>Spółki dnia, sektory, momentum, wolumeny.</p>
+        <h2>Analizy sektorowe</h2>
+        <p>Najsilniejsze sektory:</p>
+        <ul>
+            <li>🟩 Biotechnologia – trend wzrostowy</li>
+            <li>🟦 AI / Tech – wysoka zmienność</li>
+            <li>🟥 Surowce – korekta</li>
+        </ul>
     </div>
+
+    <!-- SKANER RYNKU -->
+    <div class="card">
+        <h2>Skaner rynku</h2>
+        <p>Dzisiejsze sygnały:</p>
+        <ul>
+            <li>🔍 12 spółek z wybiciem</li>
+            <li>🔍 7 spółek z dużym wolumenem</li>
+            <li>🔍 4 spółki z sygnałem AI</li>
+        </ul>
+    </div>
+
+</div>
+
 </body>
 </html>
